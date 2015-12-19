@@ -29,8 +29,8 @@
 - `Phalcon\Mvc\Model\Criteria::getGroup` renamed to `Phalcon\Mvc\Model\Criteria::getGroupBy`
 - Added method getOption() in `Phalcon\Mvc\Model\RelationInterface`
 - Added `Phalcon\Acl\Roleable` and `Phalcon\Acl\Resourceable` Interfaces, Now you can pass objects to `Phalcon\Acl\Adapter\Memory::isAllowed` as `roleName` and `resourceName`, also they will be automatically passed to function defined in `Phalcon\Acl\Adapter\Memory::isAllowed` by type
-- `Phalcon\Acl\Adapter\AdapterInterface::allow` and `Phalcon\Acl\Adapter\AdapterInterface::deny` have 4th argument - function, which will be called when using `Phalcon\Acl\Adapter\Memory::isAllowed`
-- `Phalcon\Acl\Adapter\AdapterInterface::isAllowed` have 4th argument - parameters, you can pass arguments for function defined in `Phalcon\Acl\Adapter\Memory::isAllowed` as associative array where key is argument name
+- `Phalcon\Acl\Adapter\Memory::allow` and `Phalcon\Acl\Adapter\Memory::deny` have 4th argument - function, which will be called when using `Phalcon\Acl\Adapter\Memory::isAllowed`
+- `Phalcon\Acl\Adapter\Memory::isAllowed` have 4th argument - parameters, you can pass arguments for function defined in `Phalcon\Acl\Adapter\Memory::isAllowed` as associative array where key is argument name
 
 # [2.0.10](https://github.com/phalcon/cphalcon/releases/tag/phalcon-v2.0.10) (2015-XX-XX)
 - ORM: Added support for DATE columns in Oracle
