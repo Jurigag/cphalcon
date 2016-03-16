@@ -364,4 +364,32 @@ class AssetsManagerTest extends TBase
             }
         );
     }
+
+    /**
+     * exists tests
+     *
+     * @author Wojciech Ślawski <jurigag@gmail.com>
+     * @since  2016-03-16
+     */
+    public function testAssetsExistsCollection()
+    {
+        $this->specify(
+            "The addResource on assets manager does add resources correctly",
+            function () {
+
+                $assets = new PhTAssetsManager();
+
+                $assets->collection('footer')
+                    ->addCss('/css/style1.css');
+
+                $assets->addResource(new PhAssetsResourceCss('/css/style.css', false));
+
+                $footer = $assets->exists('footer');
+                $header = $assets->exists('header');
+
+                expect($footer)->true();
+                expect($header)->false();
+            }
+        );
+    }
 }
