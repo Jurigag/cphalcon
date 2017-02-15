@@ -751,13 +751,13 @@ class MemoryTest extends UnitTest
     {
         $this->specify(
             "Role and Resource objects doesn't work with isAllowed method",
-            function(){
+            function () {
                 $acl = new Memory();
                 $acl->setDefaultAction(Acl::DENY);
                 $role = new Role('Guests');
                 $resource = new Resource('Post');
                 $acl->addRole($role);
-                $acl->addResource($resource, ['index','update','create']);
+                $acl->addResource($resource, ['index', 'update', 'create']);
 
                 $acl->allow('Guests', 'Post', 'index');
 
