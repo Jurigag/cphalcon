@@ -6,7 +6,7 @@ use DateTime;
 use Helper\CollectionTrait;
 use Phalcon\Test\Collections\Robots;
 use Phalcon\Test\Unit\Mvc\Collection\Helpers\CollectionUniquenessTrait;
-use Phalcon\Test\Unit\Mvc\Collection\Helpers\Validation;
+use Phalcon\Test\Unit\Mvc\Collection\Helpers\ValidationBase;
 use UnitTester;
 
 /**
@@ -27,7 +27,7 @@ use UnitTester;
  * through the world-wide-web, please send an email to license@phalconphp.com
  * so that we can send you a copy immediately.
  */
-class ValidationCest extends Validation
+class ValidationCest extends ValidationBase
 {
     /**
      * @var Robots
