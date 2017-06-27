@@ -63,4 +63,23 @@ class FactoryTest extends FactoryBase
             }
         );
     }
+
+    /**
+     * Test factory using array
+     *
+     * @author Wojciech Ślawski <jurigag@gmail.com>
+     * @since  2017-06-27
+     */
+    public function testStringFactory()
+    {
+        $this->specify(
+            "Factory using string doesn't work properly",
+            function () {
+                $filePath = $this->arrayConfig['config']['filePath'];
+                /** @var Ini $ini */
+                $ini = Factory::load($filePath);
+                expect($ini)->isInstanceOf(Ini::class);
+            }
+        );
+    }
 }
